@@ -1,4 +1,5 @@
-import { Button, Card, CardBody, Chip, Image } from '@nextui-org/react'
+import { Button, Chip } from '@nextui-org/react'
+import { motion } from 'framer-motion'
 import FullScreen from '~/components/FullScreen'
 import Nav2 from '~/components/Nav2'
 import ProjectWrapper from '~/components/ProjectWrapper'
@@ -8,7 +9,7 @@ export default function Index() {
   const shortContanct = ['Hà Nội', 'luong.tuananh.biz@gmail.com', '+84 834 077 036']
 
   return (
-    <div className="scroll-smooth h-screen overflow-auto snap-mandatory snap-y">
+    <motion.div className="scroll-smooth h-screen overflow-auto snap-mandatory snap-y">
       <Nav2 />
       <FullScreen>
         <div>
@@ -47,11 +48,11 @@ export default function Index() {
             <img className="w-36 h-36" src="/file/qr.svg" alt="qr" />
           </div>
         </div>
-        <div>
-          <Image
-            className="w-1/2 block mx-auto mb-8"
+        <div className="w-full">
+          <img
+            className="w-1/2 block mx-auto mb-8 rounded-xl"
             alt="Myself"
-            src="https://nextui-docs-v2.vercel.app/images/hero-card-complete.jpeg"
+            src="https://i.pinimg.com/736x/f5/79/66/f579662414c2cc0bfec0734945f697a1.jpg"
           />
           <div className="flex gap-x-12 justify-center">
             {shortContanct.map((contact, index) => (
@@ -63,6 +64,6 @@ export default function Index() {
         </div>
       </FullScreen>
       <ProjectWrapper />
-    </div>
+    </motion.div>
   )
 }

@@ -1,9 +1,13 @@
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
-import type { LinksFunction } from '@remix-run/node'
-import stylesheet from './tailwind.css?url'
 import { NextUIProvider } from '@nextui-org/react'
+import type { LinksFunction, MetaFunction } from '@remix-run/node'
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
+import stylesheet from './tailwind.css?url'
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet }]
+
+export const meta: MetaFunction = () => {
+  return [{ title: 'Portfolio - Lương Tuấn Anh' }, { description: 'Portfolio của Tuấn Anh' }]
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -21,6 +25,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <Scripts />
         </NextUIProvider>
       </body>
+      {/* <Footer /> */}
     </html>
   )
 }

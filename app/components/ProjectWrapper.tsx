@@ -15,10 +15,10 @@ export default function ProjectWrapper() {
       ],
       sections: [
         {
-          sectionName: 'Mục Tiêu',
+          sectionName: 'Kết Quả',
           info: (
             <ul>
-              <li>- Đạt tối thiếu 100 trẻ em tham gia sự kiện</li>
+              <li>- Đạt 100 trẻ em tham gia sự kiện</li>
               <li>- Trẻ em hiểu được thông điệp muốn truyền tải sau khi tham gia</li>
             </ul>
           )
@@ -27,12 +27,39 @@ export default function ProjectWrapper() {
           sectionName: 'Công Việc Đảm Nhiệm',
           info: (
             <div className="flex flex-wrap gap-4">
-              <Card className="w-fit bg-background font-bold">
-                <CardBody>Tìm kiếm và đàm phán địa điểm tổ chức</CardBody>
-              </Card>
-              <Card className="w-fit bg-background font-bold">
-                <CardBody>Kiểm soát dòng tiền dự án</CardBody>
-              </Card>
+              <CardWrapper>Tìm kiếm và đàm phán địa điểm tổ chức</CardWrapper>
+              <CardWrapper>Kiểm soát dòng tiền dự án</CardWrapper>
+            </div>
+          )
+        }
+      ]
+    },
+    {
+      title: 'Summer Rhythms',
+      brief: 'Brand trang sức thủ công, tập trung vào đối tượng khách hàng trẻ từ 18-25',
+      images: [
+        'https://i.imgur.com/634StKT.png',
+        'https://i.imgur.com/j6vOef8.png',
+        'https://i.imgur.com/1JncgZ2.png',
+        'https://i.imgur.com/L1hkg5E.png'
+      ],
+      sections: [
+        {
+          sectionName: 'Kết Quả',
+          info: (
+            <ul>
+              <li>- 500 sản phẩm được bán ra trong 6 tuần</li>
+              <li>- Tổng view trên các nền tảng đạt trên 20k, 3k follower mới</li>
+              <li>- Toàn bộ khách hàng feedback tốt về sản phẩm</li>
+            </ul>
+          )
+        },
+        {
+          sectionName: 'Công Việc Đảm Nhiệm',
+          info: (
+            <div className="flex flex-wrap gap-4">
+              <CardWrapper>Quản lý và vận hành dự án</CardWrapper>
+              <CardWrapper>Kiểm soát chi phí, doanh thu và lợi nhuận</CardWrapper>
             </div>
           )
         }
@@ -54,7 +81,7 @@ export default function ProjectWrapper() {
     <>
       {data.map(({ title, brief, images, sections }, index) => (
         <FullScreen key={index} className="grid grid-cols-2 grid-flow-dense gap-x-8 place-items-center">
-          <div className={`w-full col-start-${(index % 2) + 1}`}>
+          <div className={`w-full`}>
             <h2 className="text-7xl font-bold text-center mb-8">
               <span className="text-3xl font-normal">Dự Án</span>
               <br />
@@ -85,5 +112,13 @@ export default function ProjectWrapper() {
         </FullScreen>
       ))}
     </>
+  )
+}
+
+function CardWrapper({ children }: { children: string }) {
+  return (
+    <Card className="w-fit bg-background font-bold">
+      <CardBody>{children}</CardBody>
+    </Card>
   )
 }
