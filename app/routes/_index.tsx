@@ -49,11 +49,7 @@ export default function Index() {
           </div>
         </div>
         <div className="w-full">
-          <img
-            className="w-1/2 block mx-auto mb-8 rounded-xl"
-            alt="Myself"
-            src="https://i.pinimg.com/736x/f5/79/66/f579662414c2cc0bfec0734945f697a1.jpg"
-          />
+          <img className="w-1/2 block mx-auto mb-8 rounded-xl" alt="Myself" src="/images/self.jpg" />
           <div className="flex gap-x-12 justify-center">
             {shortContanct.map((contact, index) => (
               <Chip key={index} size="lg" variant="bordered">
