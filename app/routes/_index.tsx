@@ -39,13 +39,17 @@ export default function Index() {
             và phân tích dữ liệu để tối ưu hóa hiệu quả chiến dịch cũng như mở rộng tệp khách hàng cho doanh nghiệp.
           </p>
           <div className="flex items-center gap-4">
-            <a href="/file/Lương Tuấn Anh_Digital Marketing.pdf" target="_blank">
+            <a href="/file/CV_Lương Tuấn Anh_Digital Marketing.pdf" target="_blank">
               <Button className="font-bold" color="warning" variant="solid">
                 Mở CV của mình
               </Button>
             </a>
             <span>Hoặc scan để xem</span>
-            <img className="w-36 h-36" src="/file/qr.svg" alt="qr" />
+            <img
+              className="w-36 h-36 rounded-lg !border-solid !border-2 !border-stone-300"
+              src="/images/qr.png"
+              alt="qr"
+            />
           </div>
         </div>
         <div className="w-full">
